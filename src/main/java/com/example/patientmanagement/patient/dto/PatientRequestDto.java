@@ -1,5 +1,8 @@
 package com.example.patientmanagement.patient.dto;
 
+import com.example.patientmanagement.patient.domain.GenderCode;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -7,22 +10,23 @@ public class PatientRequestDto {
 
 
     @Getter
-    @NoArgsConstructor
+    @AllArgsConstructor
     public static class Create {
 
+        private Long hospitalId;
         private String name;
-        private String unicque_number;
-        private String gender_code;
+        private GenderCode gender_code;
         private String birth;
         private String phone_number;
     }
 
     @Getter
-    @NoArgsConstructor
+    @AllArgsConstructor
     public static class Update {
 
+        private Long patient_id;
         private String name;
-        private String gender_code;
+        private GenderCode gender_code;
         private String birth;
         private String phone_number;
     }
