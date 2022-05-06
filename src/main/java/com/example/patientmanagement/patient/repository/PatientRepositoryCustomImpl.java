@@ -19,7 +19,6 @@ public class PatientRepositoryCustomImpl implements PatientRepositoryCustom{
 
     private final JPAQueryFactory queryFactory;
 
-//select distinct p from Patient p left join fetch p.visitList v where p.hospital.id =:hospitalId  order by v.created desc
     @Override
     public Optional<List<Patient>> findAll(Long hospitalId,String type,String searchValue, Pageable pageable) {
 
