@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.patientmanagement.patient.service.PatientServiceImplTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-05-06T09:24:04" hostname="hongda-eung-ui-MacBookAir.local" time="0.546">
+<testsuite name="com.example.patientmanagement.patient.service.PatientServiceImplTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2022-05-06T12:54:02" hostname="hongda-eung-ui-MacBookAir.local" time="0.993">
   <properties/>
-  <testcase name="환자_전체_조회()" classname="com.example.patientmanagement.patient.service.PatientServiceImplTest" time="0.546"/>
-  <system-out><![CDATA[18:23:56.804 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-18:23:56.813 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-18:23:56.863 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.patientmanagement.patient.service.PatientServiceImplTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-18:23:56.879 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.patientmanagement.patient.service.PatientServiceImplTest], using SpringBootContextLoader
-18:23:56.882 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.patientmanagement.patient.service.PatientServiceImplTest]: class path resource [com/example/patientmanagement/patient/service/PatientServiceImplTest-context.xml] does not exist
-18:23:56.882 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.patientmanagement.patient.service.PatientServiceImplTest]: class path resource [com/example/patientmanagement/patient/service/PatientServiceImplTestContext.groovy] does not exist
-18:23:56.883 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.patientmanagement.patient.service.PatientServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-18:23:56.884 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.patientmanagement.patient.service.PatientServiceImplTest]: PatientServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-18:23:56.939 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.patientmanagement.patient.service.PatientServiceImplTest]
-18:23:57.046 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/hongda-eung/Desktop/과제/디정션/build/classes/java/main/com/example/patientmanagement/PatientManagementApplication.class]
-18:23:57.049 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.patientmanagement.PatientManagementApplication for test class com.example.patientmanagement.patient.service.PatientServiceImplTest
-18:23:57.156 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.patientmanagement.patient.service.PatientServiceImplTest]: using defaults.
-18:23:57.160 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-18:23:57.179 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@78a287ed, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@546ccad7, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@5357c287, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1623134f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7a527389, org.springframework.test.context.support.DirtiesContextTestExecutionListener@485a3466, org.springframework.test.context.transaction.TransactionalTestExecutionListener@25748410, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2b43529a, org.springframework.test.context.event.EventPublishingTestExecutionListener@4264b240, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5b04476e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5ad10c1a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6bb75258, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@c260bdc, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@75e01201, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2783717b]
-18:23:57.188 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@339bf286 testClass = PatientServiceImplTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@38be305c testClass = PatientServiceImplTest, locations = '{}', classes = '{class com.example.patientmanagement.PatientManagementApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@26ceffa8, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7a362b6b, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@512baff6, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@1800a575, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@56928307, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@1f59a598], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+  <testcase name="환자_단일_조회()" classname="com.example.patientmanagement.patient.service.PatientServiceImplTest" time="0.623"/>
+  <testcase name="환자_등록번호_조회()" classname="com.example.patientmanagement.patient.service.PatientServiceImplTest" time="0.179"/>
+  <testcase name="환자_이름_조회()" classname="com.example.patientmanagement.patient.service.PatientServiceImplTest" time="0.046"/>
+  <testcase name="환자_정보_수정()" classname="com.example.patientmanagement.patient.service.PatientServiceImplTest" time="0.046"/>
+  <testcase name="환자_생성()" classname="com.example.patientmanagement.patient.service.PatientServiceImplTest" time="0.018"/>
+  <testcase name="환자_삭제()" classname="com.example.patientmanagement.patient.service.PatientServiceImplTest" time="0.037"/>
+  <testcase name="환자_생일_조회()" classname="com.example.patientmanagement.patient.service.PatientServiceImplTest" time="0.024"/>
+  <system-out><![CDATA[21:53:54.968 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+21:53:54.980 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+21:53:55.032 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.patientmanagement.patient.service.PatientServiceImplTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+21:53:55.047 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.patientmanagement.patient.service.PatientServiceImplTest], using SpringBootContextLoader
+21:53:55.050 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.patientmanagement.patient.service.PatientServiceImplTest]: class path resource [com/example/patientmanagement/patient/service/PatientServiceImplTest-context.xml] does not exist
+21:53:55.051 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.patientmanagement.patient.service.PatientServiceImplTest]: class path resource [com/example/patientmanagement/patient/service/PatientServiceImplTestContext.groovy] does not exist
+21:53:55.052 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.patientmanagement.patient.service.PatientServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+21:53:55.053 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.patientmanagement.patient.service.PatientServiceImplTest]: PatientServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:53:55.123 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.patientmanagement.patient.service.PatientServiceImplTest]
+21:53:55.252 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/hongda-eung/Desktop/과제/디정션/build/classes/java/main/com/example/patientmanagement/PatientManagementApplication.class]
+21:53:55.258 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.patientmanagement.PatientManagementApplication for test class com.example.patientmanagement.patient.service.PatientServiceImplTest
+21:53:55.381 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.patientmanagement.patient.service.PatientServiceImplTest]: using defaults.
+21:53:55.385 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+21:53:55.399 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@60f7cc1d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@11eadcba, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4721d212, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1b065145, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@45cff11c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@207ea13, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4bff1903, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@62dae540, org.springframework.test.context.event.EventPublishingTestExecutionListener@5827af16, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@654d8173, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@56c9bbd8, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@630cb4a4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@636e8cc, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@f79a760, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@14f5da2c]
+21:53:55.404 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@5ce33a58 testClass = PatientServiceImplTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@78a287ed testClass = PatientServiceImplTest, locations = '{}', classes = '{class com.example.patientmanagement.PatientManagementApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@7d446ed1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@338c99c8, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2796aeae, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@70f02c32, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7582ff54, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2e377400], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -26,30 +32,30 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.6.7)
 
-2022-05-06 18:23:57.869  INFO 44978 --- [    Test worker] c.e.p.p.service.PatientServiceImplTest   : Starting PatientServiceImplTest using Java 16 on hongda-eung-ui-MacBookAir.local with PID 44978 (started by hongda-eung in /Users/hongda-eung/Desktop/과제/디정션)
-2022-05-06 18:23:57.871  INFO 44978 --- [    Test worker] c.e.p.p.service.PatientServiceImplTest   : No active profile set, falling back to 1 default profile: "default"
-2022-05-06 18:23:59.025  INFO 44978 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-05-06 18:23:59.122  INFO 44978 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 3 JPA repository interfaces.
-2022-05-06 18:24:00.203  INFO 44978 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-05-06 18:24:00.263  INFO 44978 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.8.Final
-2022-05-06 18:24:00.441  INFO 44978 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-05-06 18:24:00.559  INFO 44978 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-05-06 18:24:00.709  INFO 44978 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-05-06 18:24:00.744  INFO 44978 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-05-06 18:24:01.514 DEBUG 44978 --- [    Test worker] org.hibernate.SQL                        : 
+2022-05-06 21:53:55.908  INFO 54765 --- [    Test worker] c.e.p.p.service.PatientServiceImplTest   : Starting PatientServiceImplTest using Java 16 on hongda-eung-ui-MacBookAir.local with PID 54765 (started by hongda-eung in /Users/hongda-eung/Desktop/과제/디정션)
+2022-05-06 21:53:55.911  INFO 54765 --- [    Test worker] c.e.p.p.service.PatientServiceImplTest   : No active profile set, falling back to 1 default profile: "default"
+2022-05-06 21:53:57.065  INFO 54765 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-06 21:53:57.180  INFO 54765 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108 ms. Found 3 JPA repository interfaces.
+2022-05-06 21:53:58.291  INFO 54765 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-06 21:53:58.349  INFO 54765 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.8.Final
+2022-05-06 21:53:58.511  INFO 54765 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-06 21:53:58.623  INFO 54765 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-06 21:53:58.748  INFO 54765 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-06 21:53:58.779  INFO 54765 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-05-06 21:53:59.561 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
     
     drop table if exists hospital CASCADE 
-2022-05-06 18:24:01.522 DEBUG 44978 --- [    Test worker] org.hibernate.SQL                        : 
+2022-05-06 21:53:59.566 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
     
     drop table if exists patient CASCADE 
-2022-05-06 18:24:01.523 DEBUG 44978 --- [    Test worker] org.hibernate.SQL                        : 
+2022-05-06 21:53:59.567 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
     
     drop table if exists visit CASCADE 
-2022-05-06 18:24:01.525 DEBUG 44978 --- [    Test worker] org.hibernate.SQL                        : 
+2022-05-06 21:53:59.568 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
     
     drop sequence if exists hibernate_sequence
-2022-05-06 18:24:01.527 DEBUG 44978 --- [    Test worker] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
-2022-05-06 18:24:01.531 DEBUG 44978 --- [    Test worker] org.hibernate.SQL                        : 
+2022-05-06 21:53:59.570 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+2022-05-06 21:53:59.571 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
     
     create table hospital (
        hospital_id bigint not null,
@@ -58,10 +64,12 @@
         nursing_home_number varchar(20) not null,
         primary key (hospital_id)
     )
-2022-05-06 18:24:01.549 DEBUG 44978 --- [    Test worker] org.hibernate.SQL                        : 
+2022-05-06 21:53:59.574 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
     
     create table patient (
        patient_id bigint not null,
+        created timestamp,
+        modified timestamp,
         birth varchar(255),
         gender_code varchar(10) not null,
         name varchar(45) not null,
@@ -70,11 +78,12 @@
         hospital_id bigint,
         primary key (patient_id)
     )
-2022-05-06 18:24:01.553 DEBUG 44978 --- [    Test worker] org.hibernate.SQL                        : 
+2022-05-06 21:53:59.575 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
     
     create table visit (
        visit_id bigint not null,
-        reception_date timestamp,
+        created timestamp,
+        modified timestamp,
         treatment_subject_code varchar(10) not null,
         treatment_type_code varchar(10) not null,
         visit_status_code varchar(10) not null,
@@ -82,73 +91,67 @@
         patient_id bigint,
         primary key (visit_id)
     )
-2022-05-06 18:24:01.554 DEBUG 44978 --- [    Test worker] org.hibernate.SQL                        : 
+2022-05-06 21:53:59.576 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
     
     alter table patient 
        add constraint FKfrtkp1fawf55kilsxb1uxpio0 
        foreign key (hospital_id) 
        references hospital
-2022-05-06 18:24:01.559 DEBUG 44978 --- [    Test worker] org.hibernate.SQL                        : 
+2022-05-06 21:53:59.585 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
     
     alter table visit 
        add constraint FKdsqhl23waqgy46avcq88aiisq 
        foreign key (hospital_id) 
        references hospital
-2022-05-06 18:24:01.565 DEBUG 44978 --- [    Test worker] org.hibernate.SQL                        : 
+2022-05-06 21:53:59.589 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
     
     alter table visit 
        add constraint FKrban5yeabnx30seqm69jw44e 
        foreign key (patient_id) 
        references patient
-2022-05-06 18:24:01.573  INFO 44978 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-05-06 18:24:01.581  INFO 44978 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-05-06 18:24:02.620  WARN 44978 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-05-06 18:24:03.956  INFO 44978 --- [    Test worker] c.e.p.p.service.PatientServiceImplTest   : Started PatientServiceImplTest in 6.716 seconds (JVM running for 8.276)
-2022-05-06 18:24:04.038  INFO 44978 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@339bf286 testClass = PatientServiceImplTest, testInstance = com.example.patientmanagement.patient.service.PatientServiceImplTest@13cae908, testMethod = 환자_전체_조회@PatientServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@38be305c testClass = PatientServiceImplTest, locations = '{}', classes = '{class com.example.patientmanagement.PatientManagementApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@26ceffa8, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7a362b6b, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@512baff6, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@1800a575, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@56928307, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@1f59a598], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@21b2579d]; rollback [true]
-2022-05-06 18:24:04.270 DEBUG 44978 --- [    Test worker] org.hibernate.SQL                        : 
+2022-05-06 21:53:59.595  INFO 54765 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-06 21:53:59.602  INFO 54765 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-06 21:54:00.771  WARN 54765 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-06 21:54:02.071  INFO 54765 --- [    Test worker] c.e.p.p.service.PatientServiceImplTest   : Started PatientServiceImplTest in 6.608 seconds (JVM running for 8.195)
+2022-05-06 21:54:02.138  INFO 54765 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@5ce33a58 testClass = PatientServiceImplTest, testInstance = com.example.patientmanagement.patient.service.PatientServiceImplTest@3f12676, testMethod = 환자_단일_조회@PatientServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@78a287ed testClass = PatientServiceImplTest, locations = '{}', classes = '{class com.example.patientmanagement.PatientManagementApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@7d446ed1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@338c99c8, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2796aeae, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@70f02c32, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7582ff54, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2e377400], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@1b868ef0]; rollback [true]
+2022-05-06 21:54:02.358 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
     call next value for hibernate_sequence
-2022-05-06 18:24:04.301 DEBUG 44978 --- [    Test worker] org.hibernate.SQL                        : 
+2022-05-06 21:54:02.538 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
     call next value for hibernate_sequence
-2022-05-06 18:24:04.310 DEBUG 44978 --- [    Test worker] org.hibernate.SQL                        : 
-    call next value for hibernate_sequence
-2022-05-06 18:24:04.456 DEBUG 44978 --- [    Test worker] org.hibernate.SQL                        : 
+2022-05-06 21:54:02.593 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
     insert 
     into
         hospital
         (hospital_director, hospital_name, nursing_home_number, hospital_id) 
     values
         (?, ?, ?, ?)
-2022-05-06 18:24:04.463 DEBUG 44978 --- [    Test worker] org.hibernate.SQL                        : 
+2022-05-06 21:54:02.598 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
     insert 
     into
         patient
-        (birth, gender_code, hospital_id, name, phone_number, registration_number, patient_id) 
+        (created, modified, birth, gender_code, hospital_id, name, phone_number, registration_number, patient_id) 
     values
-        (?, ?, ?, ?, ?, ?, ?)
-2022-05-06 18:24:04.465 DEBUG 44978 --- [    Test worker] org.hibernate.SQL                        : 
-    insert 
-    into
-        patient
-        (birth, gender_code, hospital_id, name, phone_number, registration_number, patient_id) 
-    values
-        (?, ?, ?, ?, ?, ?, ?)
-2022-05-06 18:24:04.472 DEBUG 44978 --- [    Test worker] org.hibernate.SQL                        : 
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2022-05-06 21:54:02.654 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
     select
         patient0_.patient_id as patient_1_1_0_,
         visitlist1_.visit_id as visit_id1_2_1_,
-        patient0_.birth as birth2_1_0_,
-        patient0_.gender_code as gender_c3_1_0_,
-        patient0_.hospital_id as hospital7_1_0_,
-        patient0_.name as name4_1_0_,
-        patient0_.phone_number as phone_nu5_1_0_,
-        patient0_.registration_number as registra6_1_0_,
-        visitlist1_.hospital_id as hospital6_2_1_,
-        visitlist1_.patient_id as patient_7_2_1_,
-        visitlist1_.reception_date as receptio2_2_1_,
-        visitlist1_.treatment_subject_code as treatmen3_2_1_,
-        visitlist1_.treatment_type_code as treatmen4_2_1_,
-        visitlist1_.visit_status_code as visit_st5_2_1_,
-        visitlist1_.patient_id as patient_7_2_0__,
+        patient0_.created as created2_1_0_,
+        patient0_.modified as modified3_1_0_,
+        patient0_.birth as birth4_1_0_,
+        patient0_.gender_code as gender_c5_1_0_,
+        patient0_.hospital_id as hospital9_1_0_,
+        patient0_.name as name6_1_0_,
+        patient0_.phone_number as phone_nu7_1_0_,
+        patient0_.registration_number as registra8_1_0_,
+        visitlist1_.created as created2_2_1_,
+        visitlist1_.modified as modified3_2_1_,
+        visitlist1_.hospital_id as hospital7_2_1_,
+        visitlist1_.patient_id as patient_8_2_1_,
+        visitlist1_.treatment_subject_code as treatmen4_2_1_,
+        visitlist1_.treatment_type_code as treatmen5_2_1_,
+        visitlist1_.visit_status_code as visit_st6_2_1_,
+        visitlist1_.patient_id as patient_8_2_0__,
         visitlist1_.visit_id as visit_id1_2_0__ 
     from
         patient patient0_ 
@@ -156,10 +159,342 @@
         visit visitlist1_ 
             on patient0_.patient_id=visitlist1_.patient_id 
     where
-        patient0_.hospital_id=? 
+        patient0_.patient_id=? 
     order by
-        visitlist1_.reception_date desc
-2022-05-06 18:24:04.558  INFO 44978 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@339bf286 testClass = PatientServiceImplTest, testInstance = com.example.patientmanagement.patient.service.PatientServiceImplTest@13cae908, testMethod = 환자_전체_조회@PatientServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@38be305c testClass = PatientServiceImplTest, locations = '{}', classes = '{class com.example.patientmanagement.PatientManagementApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@26ceffa8, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7a362b6b, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@512baff6, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@1800a575, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@56928307, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@1f59a598], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
+        visitlist1_.created desc
+2022-05-06 21:54:02.736  INFO 54765 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@5ce33a58 testClass = PatientServiceImplTest, testInstance = com.example.patientmanagement.patient.service.PatientServiceImplTest@3f12676, testMethod = 환자_단일_조회@PatientServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@78a287ed testClass = PatientServiceImplTest, locations = '{}', classes = '{class com.example.patientmanagement.PatientManagementApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@7d446ed1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@338c99c8, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2796aeae, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@70f02c32, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7582ff54, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2e377400], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
+2022-05-06 21:54:02.765  INFO 54765 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@5ce33a58 testClass = PatientServiceImplTest, testInstance = com.example.patientmanagement.patient.service.PatientServiceImplTest@463746eb, testMethod = 환자_등록번호_조회@PatientServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@78a287ed testClass = PatientServiceImplTest, locations = '{}', classes = '{class com.example.patientmanagement.PatientManagementApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@7d446ed1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@338c99c8, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2796aeae, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@70f02c32, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7582ff54, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2e377400], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@1b868ef0]; rollback [true]
+2022-05-06 21:54:02.768 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    call next value for hibernate_sequence
+2022-05-06 21:54:02.771 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    call next value for hibernate_sequence
+2022-05-06 21:54:02.903 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        hospital
+        (hospital_director, hospital_name, nursing_home_number, hospital_id) 
+    values
+        (?, ?, ?, ?)
+2022-05-06 21:54:02.905 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        patient
+        (created, modified, birth, gender_code, hospital_id, name, phone_number, registration_number, patient_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2022-05-06 21:54:02.908 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        distinct patient0_.patient_id as patient_1_1_,
+        patient0_.created as created2_1_,
+        patient0_.modified as modified3_1_,
+        patient0_.birth as birth4_1_,
+        patient0_.gender_code as gender_c5_1_,
+        patient0_.hospital_id as hospital9_1_,
+        patient0_.name as name6_1_,
+        patient0_.phone_number as phone_nu7_1_,
+        patient0_.registration_number as registra8_1_ 
+    from
+        patient patient0_ 
+    left outer join
+        visit visit1_ 
+            on (
+                visit1_.patient_id=patient0_.patient_id
+            ) 
+    where
+        patient0_.registration_number=? 
+        and patient0_.hospital_id=? limit ?
+2022-05-06 21:54:02.926  INFO 54765 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@5ce33a58 testClass = PatientServiceImplTest, testInstance = com.example.patientmanagement.patient.service.PatientServiceImplTest@463746eb, testMethod = 환자_등록번호_조회@PatientServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@78a287ed testClass = PatientServiceImplTest, locations = '{}', classes = '{class com.example.patientmanagement.PatientManagementApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@7d446ed1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@338c99c8, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2796aeae, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@70f02c32, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7582ff54, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2e377400], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
+2022-05-06 21:54:02.937  INFO 54765 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@5ce33a58 testClass = PatientServiceImplTest, testInstance = com.example.patientmanagement.patient.service.PatientServiceImplTest@7adde776, testMethod = 환자_이름_조회@PatientServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@78a287ed testClass = PatientServiceImplTest, locations = '{}', classes = '{class com.example.patientmanagement.PatientManagementApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@7d446ed1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@338c99c8, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2796aeae, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@70f02c32, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7582ff54, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2e377400], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@1b868ef0]; rollback [true]
+2022-05-06 21:54:02.946 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    call next value for hibernate_sequence
+2022-05-06 21:54:02.949 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    call next value for hibernate_sequence
+2022-05-06 21:54:02.951 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    call next value for hibernate_sequence
+2022-05-06 21:54:02.962 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        hospital
+        (hospital_director, hospital_name, nursing_home_number, hospital_id) 
+    values
+        (?, ?, ?, ?)
+2022-05-06 21:54:02.964 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        patient
+        (created, modified, birth, gender_code, hospital_id, name, phone_number, registration_number, patient_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2022-05-06 21:54:02.965 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        patient
+        (created, modified, birth, gender_code, hospital_id, name, phone_number, registration_number, patient_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2022-05-06 21:54:02.967 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        distinct patient0_.patient_id as patient_1_1_,
+        patient0_.created as created2_1_,
+        patient0_.modified as modified3_1_,
+        patient0_.birth as birth4_1_,
+        patient0_.gender_code as gender_c5_1_,
+        patient0_.hospital_id as hospital9_1_,
+        patient0_.name as name6_1_,
+        patient0_.phone_number as phone_nu7_1_,
+        patient0_.registration_number as registra8_1_ 
+    from
+        patient patient0_ 
+    left outer join
+        visit visit1_ 
+            on (
+                visit1_.patient_id=patient0_.patient_id
+            ) 
+    where
+        patient0_.name=? 
+        and patient0_.hospital_id=? limit ?
+2022-05-06 21:54:02.972  INFO 54765 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@5ce33a58 testClass = PatientServiceImplTest, testInstance = com.example.patientmanagement.patient.service.PatientServiceImplTest@7adde776, testMethod = 환자_이름_조회@PatientServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@78a287ed testClass = PatientServiceImplTest, locations = '{}', classes = '{class com.example.patientmanagement.PatientManagementApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@7d446ed1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@338c99c8, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2796aeae, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@70f02c32, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7582ff54, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2e377400], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
+2022-05-06 21:54:02.985  INFO 54765 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@5ce33a58 testClass = PatientServiceImplTest, testInstance = com.example.patientmanagement.patient.service.PatientServiceImplTest@13da6bc9, testMethod = 환자_정보_수정@PatientServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@78a287ed testClass = PatientServiceImplTest, locations = '{}', classes = '{class com.example.patientmanagement.PatientManagementApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@7d446ed1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@338c99c8, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2796aeae, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@70f02c32, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7582ff54, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2e377400], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@1b868ef0]; rollback [true]
+2022-05-06 21:54:02.986 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    call next value for hibernate_sequence
+2022-05-06 21:54:02.988 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    call next value for hibernate_sequence
+2022-05-06 21:54:02.990 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        hospital
+        (hospital_director, hospital_name, nursing_home_number, hospital_id) 
+    values
+        (?, ?, ?, ?)
+2022-05-06 21:54:02.991 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        patient
+        (created, modified, birth, gender_code, hospital_id, name, phone_number, registration_number, patient_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2022-05-06 21:54:02.994 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        patient0_.patient_id as patient_1_1_0_,
+        visitlist1_.visit_id as visit_id1_2_1_,
+        patient0_.created as created2_1_0_,
+        patient0_.modified as modified3_1_0_,
+        patient0_.birth as birth4_1_0_,
+        patient0_.gender_code as gender_c5_1_0_,
+        patient0_.hospital_id as hospital9_1_0_,
+        patient0_.name as name6_1_0_,
+        patient0_.phone_number as phone_nu7_1_0_,
+        patient0_.registration_number as registra8_1_0_,
+        visitlist1_.created as created2_2_1_,
+        visitlist1_.modified as modified3_2_1_,
+        visitlist1_.hospital_id as hospital7_2_1_,
+        visitlist1_.patient_id as patient_8_2_1_,
+        visitlist1_.treatment_subject_code as treatmen4_2_1_,
+        visitlist1_.treatment_type_code as treatmen5_2_1_,
+        visitlist1_.visit_status_code as visit_st6_2_1_,
+        visitlist1_.patient_id as patient_8_2_0__,
+        visitlist1_.visit_id as visit_id1_2_0__ 
+    from
+        patient patient0_ 
+    left outer join
+        visit visitlist1_ 
+            on patient0_.patient_id=visitlist1_.patient_id 
+    where
+        patient0_.patient_id=? 
+    order by
+        visitlist1_.created desc
+2022-05-06 21:54:03.000 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    update
+        patient 
+    set
+        created=?,
+        modified=?,
+        birth=?,
+        gender_code=?,
+        hospital_id=?,
+        name=?,
+        phone_number=?,
+        registration_number=? 
+    where
+        patient_id=?
+2022-05-06 21:54:03.023  INFO 54765 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@5ce33a58 testClass = PatientServiceImplTest, testInstance = com.example.patientmanagement.patient.service.PatientServiceImplTest@13da6bc9, testMethod = 환자_정보_수정@PatientServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@78a287ed testClass = PatientServiceImplTest, locations = '{}', classes = '{class com.example.patientmanagement.PatientManagementApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@7d446ed1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@338c99c8, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2796aeae, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@70f02c32, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7582ff54, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2e377400], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
+2022-05-06 21:54:03.033  INFO 54765 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@5ce33a58 testClass = PatientServiceImplTest, testInstance = com.example.patientmanagement.patient.service.PatientServiceImplTest@4b8601a1, testMethod = 환자_생성@PatientServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@78a287ed testClass = PatientServiceImplTest, locations = '{}', classes = '{class com.example.patientmanagement.PatientManagementApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@7d446ed1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@338c99c8, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2796aeae, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@70f02c32, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7582ff54, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2e377400], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@1b868ef0]; rollback [true]
+2022-05-06 21:54:03.035 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    call next value for hibernate_sequence
+2022-05-06 21:54:03.037 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    call next value for hibernate_sequence
+2022-05-06 21:54:03.039 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        hospital
+        (hospital_director, hospital_name, nursing_home_number, hospital_id) 
+    values
+        (?, ?, ?, ?)
+2022-05-06 21:54:03.040 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        patient
+        (created, modified, birth, gender_code, hospital_id, name, phone_number, registration_number, patient_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2022-05-06 21:54:03.041 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        patient0_.patient_id as patient_1_1_0_,
+        visitlist1_.visit_id as visit_id1_2_1_,
+        patient0_.created as created2_1_0_,
+        patient0_.modified as modified3_1_0_,
+        patient0_.birth as birth4_1_0_,
+        patient0_.gender_code as gender_c5_1_0_,
+        patient0_.hospital_id as hospital9_1_0_,
+        patient0_.name as name6_1_0_,
+        patient0_.phone_number as phone_nu7_1_0_,
+        patient0_.registration_number as registra8_1_0_,
+        visitlist1_.created as created2_2_1_,
+        visitlist1_.modified as modified3_2_1_,
+        visitlist1_.hospital_id as hospital7_2_1_,
+        visitlist1_.patient_id as patient_8_2_1_,
+        visitlist1_.treatment_subject_code as treatmen4_2_1_,
+        visitlist1_.treatment_type_code as treatmen5_2_1_,
+        visitlist1_.visit_status_code as visit_st6_2_1_,
+        visitlist1_.patient_id as patient_8_2_0__,
+        visitlist1_.visit_id as visit_id1_2_0__ 
+    from
+        patient patient0_ 
+    left outer join
+        visit visitlist1_ 
+            on patient0_.patient_id=visitlist1_.patient_id 
+    where
+        patient0_.patient_id=? 
+    order by
+        visitlist1_.created desc
+2022-05-06 21:54:03.048  INFO 54765 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@5ce33a58 testClass = PatientServiceImplTest, testInstance = com.example.patientmanagement.patient.service.PatientServiceImplTest@4b8601a1, testMethod = 환자_생성@PatientServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@78a287ed testClass = PatientServiceImplTest, locations = '{}', classes = '{class com.example.patientmanagement.PatientManagementApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@7d446ed1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@338c99c8, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2796aeae, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@70f02c32, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7582ff54, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2e377400], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
+2022-05-06 21:54:03.055  INFO 54765 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@5ce33a58 testClass = PatientServiceImplTest, testInstance = com.example.patientmanagement.patient.service.PatientServiceImplTest@6915351c, testMethod = 환자_삭제@PatientServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@78a287ed testClass = PatientServiceImplTest, locations = '{}', classes = '{class com.example.patientmanagement.PatientManagementApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@7d446ed1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@338c99c8, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2796aeae, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@70f02c32, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7582ff54, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2e377400], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@1b868ef0]; rollback [true]
+2022-05-06 21:54:03.057 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    call next value for hibernate_sequence
+2022-05-06 21:54:03.058 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    call next value for hibernate_sequence
+2022-05-06 21:54:03.060 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        hospital
+        (hospital_director, hospital_name, nursing_home_number, hospital_id) 
+    values
+        (?, ?, ?, ?)
+2022-05-06 21:54:03.061 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        patient
+        (created, modified, birth, gender_code, hospital_id, name, phone_number, registration_number, patient_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2022-05-06 21:54:03.064 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        patient0_.patient_id as patient_1_1_0_,
+        visitlist1_.visit_id as visit_id1_2_1_,
+        patient0_.created as created2_1_0_,
+        patient0_.modified as modified3_1_0_,
+        patient0_.birth as birth4_1_0_,
+        patient0_.gender_code as gender_c5_1_0_,
+        patient0_.hospital_id as hospital9_1_0_,
+        patient0_.name as name6_1_0_,
+        patient0_.phone_number as phone_nu7_1_0_,
+        patient0_.registration_number as registra8_1_0_,
+        visitlist1_.created as created2_2_1_,
+        visitlist1_.modified as modified3_2_1_,
+        visitlist1_.hospital_id as hospital7_2_1_,
+        visitlist1_.patient_id as patient_8_2_1_,
+        visitlist1_.treatment_subject_code as treatmen4_2_1_,
+        visitlist1_.treatment_type_code as treatmen5_2_1_,
+        visitlist1_.visit_status_code as visit_st6_2_1_,
+        visitlist1_.patient_id as patient_8_2_0__,
+        visitlist1_.visit_id as visit_id1_2_0__ 
+    from
+        patient patient0_ 
+    left outer join
+        visit visitlist1_ 
+            on patient0_.patient_id=visitlist1_.patient_id 
+    where
+        patient0_.patient_id=? 
+    order by
+        visitlist1_.created desc
+2022-05-06 21:54:03.078 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    delete 
+    from
+        patient 
+    where
+        patient_id=?
+2022-05-06 21:54:03.082 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        patient0_.patient_id as patient_1_1_0_,
+        visitlist1_.visit_id as visit_id1_2_1_,
+        patient0_.created as created2_1_0_,
+        patient0_.modified as modified3_1_0_,
+        patient0_.birth as birth4_1_0_,
+        patient0_.gender_code as gender_c5_1_0_,
+        patient0_.hospital_id as hospital9_1_0_,
+        patient0_.name as name6_1_0_,
+        patient0_.phone_number as phone_nu7_1_0_,
+        patient0_.registration_number as registra8_1_0_,
+        visitlist1_.created as created2_2_1_,
+        visitlist1_.modified as modified3_2_1_,
+        visitlist1_.hospital_id as hospital7_2_1_,
+        visitlist1_.patient_id as patient_8_2_1_,
+        visitlist1_.treatment_subject_code as treatmen4_2_1_,
+        visitlist1_.treatment_type_code as treatmen5_2_1_,
+        visitlist1_.visit_status_code as visit_st6_2_1_,
+        visitlist1_.patient_id as patient_8_2_0__,
+        visitlist1_.visit_id as visit_id1_2_0__ 
+    from
+        patient patient0_ 
+    left outer join
+        visit visitlist1_ 
+            on patient0_.patient_id=visitlist1_.patient_id 
+    where
+        patient0_.patient_id=? 
+    order by
+        visitlist1_.created desc
+2022-05-06 21:54:03.086  INFO 54765 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@5ce33a58 testClass = PatientServiceImplTest, testInstance = com.example.patientmanagement.patient.service.PatientServiceImplTest@6915351c, testMethod = 환자_삭제@PatientServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@78a287ed testClass = PatientServiceImplTest, locations = '{}', classes = '{class com.example.patientmanagement.PatientManagementApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@7d446ed1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@338c99c8, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2796aeae, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@70f02c32, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7582ff54, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2e377400], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
+2022-05-06 21:54:03.093  INFO 54765 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@5ce33a58 testClass = PatientServiceImplTest, testInstance = com.example.patientmanagement.patient.service.PatientServiceImplTest@182469d0, testMethod = 환자_생일_조회@PatientServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@78a287ed testClass = PatientServiceImplTest, locations = '{}', classes = '{class com.example.patientmanagement.PatientManagementApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@7d446ed1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@338c99c8, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2796aeae, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@70f02c32, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7582ff54, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2e377400], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@1b868ef0]; rollback [true]
+2022-05-06 21:54:03.095 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    call next value for hibernate_sequence
+2022-05-06 21:54:03.097 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    call next value for hibernate_sequence
+2022-05-06 21:54:03.105 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        hospital
+        (hospital_director, hospital_name, nursing_home_number, hospital_id) 
+    values
+        (?, ?, ?, ?)
+2022-05-06 21:54:03.106 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        patient
+        (created, modified, birth, gender_code, hospital_id, name, phone_number, registration_number, patient_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2022-05-06 21:54:03.108 DEBUG 54765 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        distinct patient0_.patient_id as patient_1_1_,
+        patient0_.created as created2_1_,
+        patient0_.modified as modified3_1_,
+        patient0_.birth as birth4_1_,
+        patient0_.gender_code as gender_c5_1_,
+        patient0_.hospital_id as hospital9_1_,
+        patient0_.name as name6_1_,
+        patient0_.phone_number as phone_nu7_1_,
+        patient0_.registration_number as registra8_1_ 
+    from
+        patient patient0_ 
+    left outer join
+        visit visit1_ 
+            on (
+                visit1_.patient_id=patient0_.patient_id
+            ) 
+    where
+        patient0_.birth=? 
+        and patient0_.hospital_id=? limit ?
+2022-05-06 21:54:03.112  INFO 54765 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@5ce33a58 testClass = PatientServiceImplTest, testInstance = com.example.patientmanagement.patient.service.PatientServiceImplTest@182469d0, testMethod = 환자_생일_조회@PatientServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@78a287ed testClass = PatientServiceImplTest, locations = '{}', classes = '{class com.example.patientmanagement.PatientManagementApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@7d446ed1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@338c99c8, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2796aeae, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@70f02c32, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7582ff54, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2e377400], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

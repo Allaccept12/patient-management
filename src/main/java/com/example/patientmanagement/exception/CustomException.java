@@ -2,7 +2,7 @@ package com.example.patientmanagement.exception;
 
 public class CustomException extends RuntimeException{
 
-    private ErrorCode errorCode;
+    private final ErrorCode errorCode;
 
     public CustomException(String message, ErrorCode code){
         super(message);

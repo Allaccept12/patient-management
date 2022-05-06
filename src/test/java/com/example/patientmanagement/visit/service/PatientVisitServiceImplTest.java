@@ -4,24 +4,19 @@ import com.example.patientmanagement.hospital.domain.Hospital;
 import com.example.patientmanagement.hospital.repository.HospitalRepository;
 import com.example.patientmanagement.patient.domain.GenderCode;
 import com.example.patientmanagement.patient.domain.Patient;
-import com.example.patientmanagement.patient.dto.PatientRequestDto;
 import com.example.patientmanagement.patient.repository.PatientRepository;
 import com.example.patientmanagement.visit.domain.TreatmentSubjectCode;
 import com.example.patientmanagement.visit.domain.TreatmentTypeCode;
 import com.example.patientmanagement.visit.domain.VisitStatusCode;
 import com.example.patientmanagement.visit.dto.VisitRequestDto;
-import com.example.patientmanagement.visit.repository.VisitRepository;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
-import javax.swing.text.html.parser.Entity;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 
 @SpringBootTest

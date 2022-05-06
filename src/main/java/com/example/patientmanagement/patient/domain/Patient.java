@@ -18,7 +18,6 @@ import java.util.List;
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-//@Table(indexes = @Index(name = "patient_unique_number", columnList = "uniqueNumber"))
 public class Patient extends BaseEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.SEQUENCE)

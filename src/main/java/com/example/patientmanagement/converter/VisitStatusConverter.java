@@ -2,7 +2,6 @@ package com.example.patientmanagement.converter;
 
 import com.example.patientmanagement.exception.CustomException;
 import com.example.patientmanagement.exception.ErrorCode;
-import com.example.patientmanagement.visit.domain.TreatmentTypeCode;
 import com.example.patientmanagement.visit.domain.VisitStatusCode;
 
 import javax.persistence.AttributeConverter;

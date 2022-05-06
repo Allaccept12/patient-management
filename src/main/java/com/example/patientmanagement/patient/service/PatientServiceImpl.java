@@ -10,6 +10,8 @@ import com.example.patientmanagement.patient.dto.PatientResponseDto;
 import com.example.patientmanagement.patient.repository.PatientRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -54,11 +56,11 @@ public class PatientServiceImpl implements PatientService{
     }
 
     @Transactional(readOnly = true)
-    public PatientResponseDto.PatientList findAllPatient(Long hospitalId) {
+    public PatientResponseDto.PatientList findAllPatient(Long hospitalId,String type ,String value,Integer pageNo, Integer pageSize) {
         final Hospital hospital = hospitalService.findHospital(hospitalId);
-        final List<Patient> patients = patientRepository.findAll(hospital.getId())
+        final Pageable pageable = PageRequest.of(pageNo,pageSize);
+        final List<Patient> patients = patientRepository.findAll(hospital.getId(),type,value,pageable)
                 .orElseThrow(() -> new CustomException(ErrorCode.NOT_FOUND_PATIENT));
-        System.out.println(patients.size());
         return PatientResponseDto.PatientList.builder().patientEntityList(patients).build();
     }
 

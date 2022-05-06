@@ -2,9 +2,7 @@ package com.example.patientmanagement.patient.dto;
 
 import com.example.patientmanagement.patient.domain.GenderCode;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 public class PatientRequestDto {
 

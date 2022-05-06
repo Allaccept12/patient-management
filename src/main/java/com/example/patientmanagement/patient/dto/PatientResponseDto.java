@@ -1,7 +1,6 @@
 package com.example.patientmanagement.patient.dto;
 
 import com.example.patientmanagement.patient.domain.Patient;
-import com.example.patientmanagement.visit.dto.VisitResponseDto;
 import com.example.patientmanagement.visit.dto.VisitResponseDto.PatientVisitInfo;
 import lombok.Builder;
 import lombok.Getter;

@@ -1,6 +1,5 @@
 package com.example.patientmanagement.patient.service;
 
-import com.example.patientmanagement.patient.domain.Patient;
 import com.example.patientmanagement.patient.dto.PatientRequestDto;
 import com.example.patientmanagement.patient.dto.PatientResponseDto;
 
@@ -14,6 +13,6 @@ public interface PatientService {
 
     PatientResponseDto.PatientDetailInfo findPatient(Long patientId);
 
-    PatientResponseDto.PatientList findAllPatient(Long hospitalId);
+    PatientResponseDto.PatientList findAllPatient(Long hospitalId,String type,String value, Integer pageNo, Integer pageSize);
 
 }

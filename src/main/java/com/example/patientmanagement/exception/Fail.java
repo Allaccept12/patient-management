@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Fail {
 
-    private String result = "fail";
+    private final String result = "fail";
     private String msg;
 
     public Fail(final ErrorCode errorCode){

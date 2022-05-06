@@ -56,8 +56,12 @@ public class PatientController {
     }
 
     @GetMapping("/{hospitalId}/all")
-    public ResponseEntity<Success> multipleInquiryPatient(@PathVariable Long hospitalId) {
-        return new ResponseEntity<>(new Success("환자 전체 조회",patientService.findAllPatient(hospitalId))
+    public ResponseEntity<Success> multipleInquiryPatient(@PathVariable Long hospitalId,
+                                                          @RequestParam(value = "type",defaultValue = "이름") String type,
+                                                          @RequestParam(value = "value") String value,
+                                                          @RequestParam(value = "pageNo",defaultValue = "0") Integer page,
+                                                          @RequestParam(value = "pageSize",defaultValue = "10") Integer pageSize) {
+        return new ResponseEntity<>(new Success("환자 전체 조회",patientService.findAllPatient(hospitalId,type,value,page,pageSize))
                 , HttpStatus.OK);
     }
 }

@@ -5,7 +5,6 @@ import com.example.patientmanagement.exception.ErrorCode;
 import com.example.patientmanagement.patient.domain.GenderCode;
 
 import javax.persistence.AttributeConverter;
-import java.util.Arrays;
 import java.util.EnumSet;
 import java.util.Objects;
 

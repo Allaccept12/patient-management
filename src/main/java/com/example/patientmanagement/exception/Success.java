@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Getter
 public class Success<T> {
 
-    private String result = "success" ;
+    private final String result = "success" ;
     private String msg;
     private T data;
 
