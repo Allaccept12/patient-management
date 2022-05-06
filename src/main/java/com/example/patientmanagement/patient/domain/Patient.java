@@ -1,10 +1,14 @@
 package com.example.patientmanagement.patient.domain;
 
 
+import com.example.patientmanagement.converter.GenderConverter;
 import com.example.patientmanagement.hospital.domain.Hospital;
 import com.example.patientmanagement.patient.dto.PatientRequestDto;
 import com.example.patientmanagement.visit.domain.Visit;
-import lombok.*;
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -24,10 +28,11 @@ public class Patient {
     private String name;
 
     @Column(nullable = false,length = 13)
-    private String uniqueNumber;
+    private String registrationNumber;
 
+    @Convert(converter = GenderConverter.class)
     @Column(nullable = false, length = 10)
-    private String genderCode;
+    private GenderCode genderCode;
 
     private String birth;
 
@@ -37,11 +42,14 @@ public class Patient {
     @JoinColumn(name = "hospital_id")
     private Hospital hospital;
 
+    @OneToMany(mappedBy = "patient")
+    private final List<Visit> visitList = new ArrayList<>();
+
     @Builder
-    public Patient(String name, String uniqueNumber, String genderCode,
+    public Patient(String name, String registrationNumber, GenderCode genderCode,
                    String birth, String phoneNumber, Hospital hospital) {
         this.name = name;
-        this.uniqueNumber = uniqueNumber;
+        this.registrationNumber = registrationNumber;
         this.genderCode = genderCode;
         this.birth = birth;
         this.phoneNumber = phoneNumber;
@@ -55,10 +63,10 @@ public class Patient {
         this.phoneNumber = dto.getPhone_number();
     }
 
-    public static Patient of(PatientRequestDto.Create dto, Hospital hospital) {
+    public static Patient of(PatientRequestDto.Create dto, Hospital hospital, String registrationNumber) {
         return Patient.builder()
                 .name(dto.getName())
-                .uniqueNumber(dto.getUnicque_number())
+                .registrationNumber(registrationNumber)
                 .genderCode(dto.getGender_code())
                 .birth(dto.getBirth())
                 .phoneNumber(dto.getPhone_number())

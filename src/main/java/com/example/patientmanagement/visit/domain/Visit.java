@@ -1,6 +1,9 @@
 package com.example.patientmanagement.visit.domain;
 
 
+import com.example.patientmanagement.converter.TreatmentSubjectConverter;
+import com.example.patientmanagement.converter.TreatmentTypeConverter;
+import com.example.patientmanagement.converter.VisitStatusConverter;
 import com.example.patientmanagement.hospital.domain.Hospital;
 import com.example.patientmanagement.patient.domain.Patient;
 import com.example.patientmanagement.visit.dto.VisitRequestDto;
@@ -8,6 +11,7 @@ import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -21,11 +25,20 @@ public class Visit {
     @Column(name = "visit_id")
     private Long id;
 
-    @Column(nullable = false)
+    @CreatedDate
     private Timestamp receptionDate;
 
+    @Convert(converter = VisitStatusConverter.class)
     @Column(nullable = false, length = 10)
-    private String visitStatusCode;
+    private VisitStatusCode visitStatusCode;
+
+    @Convert(converter = TreatmentSubjectConverter.class)
+    @Column(nullable = false, length = 10)
+    private TreatmentSubjectCode treatmentSubjectCode;
+
+    @Convert(converter = TreatmentTypeConverter.class)
+    @Column(nullable = false, length = 10)
+    private TreatmentTypeCode treatmentTypeCode;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "patient_id")
@@ -36,17 +49,21 @@ public class Visit {
     private Hospital hospital;
 
     @Builder
-    public Visit(Timestamp receptionDate, String visitStatusCode, Patient patient, Hospital hospital) {
+    public Visit(Timestamp receptionDate, VisitStatusCode visitStatusCode, TreatmentSubjectCode treatmentSubjectCode,
+                 TreatmentTypeCode treatmentTypeCode, Patient patient, Hospital hospital) {
         this.receptionDate = receptionDate;
         this.visitStatusCode = visitStatusCode;
+        this.treatmentSubjectCode = treatmentSubjectCode;
+        this.treatmentTypeCode = treatmentTypeCode;
         this.patient = patient;
         this.hospital = hospital;
     }
 
     public static Visit of(Patient patient, Hospital hospital, VisitRequestDto.Create dto) {
         return Visit.builder()
-                .receptionDate(dto.getReception_time())
                 .visitStatusCode(dto.getVisit_status_code())
+                .treatmentSubjectCode(dto.getTreatment_subject_code())
+                .treatmentTypeCode(dto.getTreatment_type_code())
                 .patient(patient)
                 .hospital(hospital)
                 .build();
