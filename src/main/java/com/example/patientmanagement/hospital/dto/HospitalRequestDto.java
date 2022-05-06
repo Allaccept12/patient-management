@@ -9,7 +9,7 @@ public class HospitalRequestDto {
 
     @Getter
     @NoArgsConstructor
-    public static class create {
+    public static class Create {
 
         private String hospital_name;
         private String nursing_home_number;

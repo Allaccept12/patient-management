@@ -1,6 +1,8 @@
 package com.example.patientmanagement.patient.controller;
 
 
+import com.example.patientmanagement.exception.CustomException;
+import com.example.patientmanagement.exception.ErrorCode;
 import com.example.patientmanagement.exception.Success;
 import com.example.patientmanagement.patient.dto.PatientRequestDto;
 import com.example.patientmanagement.patient.service.PatientService;
@@ -11,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/patients")
+@RequestMapping("api/patients")
 public class PatientController {
 
 
@@ -19,12 +21,24 @@ public class PatientController {
 
     @PostMapping("")
     public ResponseEntity<Success> registrationPatient(@RequestBody PatientRequestDto.Create dto) {
-        return new ResponseEntity<>(new Success("환자 등록",patientService.createPatient(dto)
-                ), HttpStatus.OK);
+        if (dto.getName().isBlank() || dto.getName().length() > 45) {
+            throw new CustomException(ErrorCode.VALID_PATIENT_NAME);
+        }
+        if (dto.getGender_code().getCode().isBlank()) {
+            throw new CustomException(ErrorCode.VALID_PATIENT_GENDER_CODE);
+        }
+        return new ResponseEntity<>(new Success("환자 등록",patientService.createPatient(dto))
+                , HttpStatus.OK);
     }
 
     @PatchMapping("")
     public ResponseEntity<Success> editPatient(@RequestBody PatientRequestDto.Update dto) {
+        if (dto.getName().isBlank() || dto.getName().length() > 45) {
+            throw new CustomException(ErrorCode.VALID_PATIENT_NAME);
+        }
+        if (dto.getGender_code().getCode().isBlank()) {
+            throw new CustomException(ErrorCode.VALID_PATIENT_GENDER_CODE);
+        }
         patientService.editPatient(dto);
         return new ResponseEntity<>(new Success("환자 정보 수정",""), HttpStatus.OK);
     }

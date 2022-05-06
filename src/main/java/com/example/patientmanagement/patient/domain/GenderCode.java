@@ -6,7 +6,9 @@ import com.example.patientmanagement.converter.EntityEnumerable;
 
 public enum GenderCode implements EntityEnumerable {
     MALE("M", "남자"),
-    FEMALE("F", "여자");
+    FEMALE("F", "여자"),
+    UNKNOWN("U","모름");
+
 
 
     private final String code;

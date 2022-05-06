@@ -9,6 +9,7 @@ import com.example.patientmanagement.patient.dto.PatientRequestDto;
 import com.example.patientmanagement.patient.dto.PatientResponseDto;
 import com.example.patientmanagement.patient.repository.PatientRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,6 +19,7 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class PatientServiceImpl implements PatientService{
 
     private final PatientRepository patientRepository;
@@ -26,7 +28,7 @@ public class PatientServiceImpl implements PatientService{
 
     @Transactional
     public Long createPatient(PatientRequestDto.Create dto) {
-        final Hospital hospital = hospitalService.findHospital(dto.getHospitalId());
+        final Hospital hospital = hospitalService.findHospital(dto.getHospital_id());
         final String registrationNumber = UUID.randomUUID()
                         .toString().substring(0,PATIENT_REGISTRATION_NUMBER_SIZE);
         Patient patient = patientRepository.save(Patient.of(dto, hospital, registrationNumber));
@@ -56,6 +58,7 @@ public class PatientServiceImpl implements PatientService{
         final Hospital hospital = hospitalService.findHospital(hospitalId);
         final List<Patient> patients = patientRepository.findAll(hospital.getId())
                 .orElseThrow(() -> new CustomException(ErrorCode.NOT_FOUND_PATIENT));
+        System.out.println(patients.size());
         return PatientResponseDto.PatientList.builder().patientEntityList(patients).build();
     }
 

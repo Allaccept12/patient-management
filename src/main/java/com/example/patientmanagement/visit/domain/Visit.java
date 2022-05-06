@@ -6,6 +6,7 @@ import com.example.patientmanagement.converter.TreatmentTypeConverter;
 import com.example.patientmanagement.converter.VisitStatusConverter;
 import com.example.patientmanagement.hospital.domain.Hospital;
 import com.example.patientmanagement.patient.domain.Patient;
+import com.example.patientmanagement.util.BaseEntity;
 import com.example.patientmanagement.visit.dto.VisitRequestDto;
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -19,14 +20,11 @@ import java.sql.Timestamp;
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Visit {
+public class Visit extends BaseEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "visit_id")
     private Long id;
-
-    @CreatedDate
-    private Timestamp receptionDate;
 
     @Convert(converter = VisitStatusConverter.class)
     @Column(nullable = false, length = 10)
@@ -49,9 +47,8 @@ public class Visit {
     private Hospital hospital;
 
     @Builder
-    public Visit(Timestamp receptionDate, VisitStatusCode visitStatusCode, TreatmentSubjectCode treatmentSubjectCode,
+    public Visit(VisitStatusCode visitStatusCode, TreatmentSubjectCode treatmentSubjectCode,
                  TreatmentTypeCode treatmentTypeCode, Patient patient, Hospital hospital) {
-        this.receptionDate = receptionDate;
         this.visitStatusCode = visitStatusCode;
         this.treatmentSubjectCode = treatmentSubjectCode;
         this.treatmentTypeCode = treatmentTypeCode;

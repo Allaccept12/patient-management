@@ -29,7 +29,7 @@ public class VisitResponseDto {
         public static PatientVisitInfo of(Visit visitEntity) {
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
             return PatientVisitInfo.builder()
-                    .visit_date(sdf.format(visitEntity.getReceptionDate()))
+                    .visit_date(sdf.format(visitEntity.getCreated()))
                     .treatment_subject_code(visitEntity.getTreatmentSubjectCode().getCode())
                     .treatment_type_code(visitEntity.getTreatmentTypeCode().getCode())
                     .build();

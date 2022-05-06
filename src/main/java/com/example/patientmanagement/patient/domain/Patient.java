@@ -4,6 +4,7 @@ package com.example.patientmanagement.patient.domain;
 import com.example.patientmanagement.converter.GenderConverter;
 import com.example.patientmanagement.hospital.domain.Hospital;
 import com.example.patientmanagement.patient.dto.PatientRequestDto;
+import com.example.patientmanagement.util.BaseEntity;
 import com.example.patientmanagement.visit.domain.Visit;
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -18,7 +19,7 @@ import java.util.List;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 //@Table(indexes = @Index(name = "patient_unique_number", columnList = "uniqueNumber"))
-public class Patient {
+public class Patient extends BaseEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "patient_id")

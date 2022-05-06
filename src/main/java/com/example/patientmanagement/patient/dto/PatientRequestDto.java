@@ -13,7 +13,7 @@ public class PatientRequestDto {
     @AllArgsConstructor
     public static class Create {
 
-        private Long hospitalId;
+        private Long hospital_id;
         private String name;
         private GenderCode gender_code;
         private String birth;

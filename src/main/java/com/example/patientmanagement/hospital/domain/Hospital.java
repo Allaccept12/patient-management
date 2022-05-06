@@ -34,7 +34,7 @@ public class Hospital {
         this.hospitalDirector = hospitalDirector;
     }
 
-    public static Hospital from(HospitalRequestDto.create dto) {
+    public static Hospital from(HospitalRequestDto.Create dto) {
         return Hospital.builder()
                 .hospitalName(dto.getHospital_name())
                 .nursingHomeNumber(dto.getNursing_home_number())

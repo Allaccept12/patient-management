@@ -19,6 +19,7 @@ public class PatientResponseDto {
     @NoArgsConstructor
     public static class PatientDetailInfo {
 
+        private Long patient_id;
         private String patient_name;
         private String patient_reception_number;
         private String patient_gender_code;
@@ -27,9 +28,10 @@ public class PatientResponseDto {
         private List<PatientVisitInfo> patient_visit_info;
 
         @Builder
-        public PatientDetailInfo(String patient_name, String patient_reception_number,
+        public PatientDetailInfo(Long patient_id,String patient_name, String patient_reception_number,
                            String patient_gender_code, String patient_birth,
                            String patient_phone_number, List<PatientVisitInfo> patient_visit_info) {
+            this.patient_id = patient_id;
             this.patient_name = patient_name;
             this.patient_reception_number = patient_reception_number;
             this.patient_gender_code = patient_gender_code;
@@ -40,6 +42,7 @@ public class PatientResponseDto {
 
         public static PatientDetailInfo from(Patient patientEntity) {
             return PatientDetailInfo.builder()
+                    .patient_id(patientEntity.getId())
                     .patient_name(patientEntity.getName())
                     .patient_reception_number(patientEntity.getRegistrationNumber())
                     .patient_gender_code(patientEntity.getGenderCode().getCode())
@@ -56,6 +59,7 @@ public class PatientResponseDto {
     @NoArgsConstructor
     public static class PatientSimpleInfo {
 
+        private Long patient_id;
         private String patient_name;
         private String patient_reception_number;
         private String patient_gender_code;
@@ -64,9 +68,10 @@ public class PatientResponseDto {
         private String patient_lately_date;
 
         @Builder
-        public PatientSimpleInfo(String patient_name, String patient_reception_number,
+        public PatientSimpleInfo(Long patient_id,String patient_name, String patient_reception_number,
                                  String patient_gender_code, String patient_birth,
                                  String patient_phone_number, String patient_lately_date) {
+            this.patient_id = patient_id;
             this.patient_name = patient_name;
             this.patient_reception_number = patient_reception_number;
             this.patient_gender_code = patient_gender_code;
@@ -79,10 +84,11 @@ public class PatientResponseDto {
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
             String latelydate = "--";
             if (patientEntity.getVisitList().size() > 0) {
-                Timestamp receptionDate = patientEntity.getVisitList().get(0).getReceptionDate();
+                Timestamp receptionDate = patientEntity.getVisitList().get(0).getCreated();
                 latelydate = sdf.format(receptionDate);
             }
             return PatientSimpleInfo.builder()
+                    .patient_id(patientEntity.getId())
                     .patient_name(patientEntity.getName())
                     .patient_reception_number(patientEntity.getRegistrationNumber())
                     .patient_gender_code(patientEntity.getGenderCode().getCode())

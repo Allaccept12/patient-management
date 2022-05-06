@@ -5,9 +5,6 @@ import com.example.patientmanagement.visit.domain.TreatmentTypeCode;
 import com.example.patientmanagement.visit.domain.VisitStatusCode;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
-
-import java.sql.Timestamp;
 
 public class VisitRequestDto {
 
@@ -16,8 +13,8 @@ public class VisitRequestDto {
     @AllArgsConstructor
     public static class Create {
 
-        private Long hospitalId;
-        private Long patientId;
+        private Long hospital_id;
+        private Long patient_id;
         private VisitStatusCode visit_status_code;
         private TreatmentSubjectCode treatment_subject_code;
         private TreatmentTypeCode treatment_type_code;

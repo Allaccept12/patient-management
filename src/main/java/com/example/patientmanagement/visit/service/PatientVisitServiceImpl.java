@@ -25,7 +25,7 @@ public class PatientVisitServiceImpl implements PatientVisitService{
 
     @Transactional
     public void receptionPatient(VisitRequestDto.Create dto) {
-        Patient patient = patientRepository.findById(dto.getPatientId())
+        Patient patient = patientRepository.findById(dto.getPatient_id())
                 .orElseThrow(() -> new CustomException(ErrorCode.NOT_FOUND_PATIENT));
         Hospital hospital = hospitalService.findHospital(patient.getHospital().getId());
         Visit visit = Visit.of(patient,hospital,dto);
